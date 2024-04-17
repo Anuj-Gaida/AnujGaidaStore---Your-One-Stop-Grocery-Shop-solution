@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GaidaStore - Your One-Stop Grocery Shop</title>
+    <style>
+        /* Basic styling, you can customize this further */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 10px;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to GaidaStore - Your One-Stop Grocery Shop</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+    </nav>
+    <section>
+        <h2>Featured Products</h2>
+        {% for i in products%}
+        <div>{{forloop.counter}}{{i}}</div>
+        {% endfor %}
+    </section>
+    <br/>
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+        </tr>
+        {% for d in price%}
+        <tr>
+            <td>{{d.name}}</td>
+            <td>{{d.price}}</td>
+        </tr>
+        {% endfor%}
+    </table>
+
+
+    <footer>
+        <p>&copy; 2024 GaidaStore. All rights reserved.</p>
+    </footer>
+</body>
+</html>
