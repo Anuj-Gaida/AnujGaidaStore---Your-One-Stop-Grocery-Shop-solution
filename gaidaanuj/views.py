@@ -14,8 +14,9 @@ def homePage(request):
        ]
     }
     return render(request, "index.html",items)
+
 def aboutus(request):
-    return HttpResponse("<b>Welcome to GaidaDuniya</b>")
+    return render(request, "aboutus.html")
 
 def gaidaRank(request, gaidaRank):
     return HttpResponse(gaidaRank)
