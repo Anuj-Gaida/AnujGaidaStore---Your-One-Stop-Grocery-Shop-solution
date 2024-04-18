@@ -17,6 +17,8 @@ def homePage(request):
 
 def aboutus(request):
     return render(request, "aboutus.html")
+def contact(request):
+    return render(request, "contact.html")
 
 def gaidaRank(request, gaidaRank):
     return HttpResponse(gaidaRank)

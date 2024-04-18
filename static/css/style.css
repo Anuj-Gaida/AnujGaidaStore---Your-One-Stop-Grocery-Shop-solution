@@ -12,18 +12,30 @@ header {
     padding: 10px 0;
     text-align: center;
 }
+/* Footer styling */
+footer {
+    background-color: #3b3939;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    line-height: 1.5; /* Ensure proper vertical alignment */
+}
 
 nav {
     background-color: #444;
     color: #fff;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
-    padding: 0 10px;
+    padding: 10px 10px;
 }
 
 section {
@@ -54,4 +66,9 @@ section {
     height: 200px; /* Set a fixed height */
     object-fit: cover; /* Maintain aspect ratio and cover the entire container */
     border-radius: 10px;
+}
+
+nav a.active {
+    background-color: white; /* Background color for active link */
+    color: red; /* Text color for active link */
 }

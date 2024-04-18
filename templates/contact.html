@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - GaidaStore</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome for icons -->
+    <style>
+        /* Additional styles for contact page */
+        #contact {
+            padding: 20px;
+            text-align: center;
+        }
+        .contact-info {
+            margin-top: 20px;
+        }
+        .contact-info p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .contact-info i {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <p><i class="fas fa-envelope"></i><a href="mailto:gaidaanuj@gmail.com">gaidaanuj@gmail.com</a></p>
+            <p><i class="fas fa-phone"></i><a href="tel:+919861755117">9861755117</a></p>
+        </div>
+    </section>
+
+{% endblock %}

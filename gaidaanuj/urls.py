@@ -20,8 +20,9 @@ from gaidaanuj import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.homePage),
+    path('',views.homePage,name="home"),
     path('aboutus/', views.aboutus, name="aboutus"),
+    path('contact/', views.contact, name="contact"),
     #lets make a dynamic route that uses int 
     path('aboutus/<int:gaidaRank>', views.gaidaRank)
 ]
