@@ -23,6 +23,7 @@ urlpatterns = [
     path('',views.homePage,name="home"),
     path('aboutus/', views.aboutus, name="aboutus"),
     path('contact/', views.contact, name="contact"),
+    path('register/', views.register, name="register"),
     #lets make a dynamic route that uses int 
-    path('aboutus/<int:gaidaRank>', views.gaidaRank)
+    path('aboutus/', views.gaidaRank)
 ]

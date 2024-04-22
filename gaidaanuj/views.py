@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 
 
@@ -20,5 +20,18 @@ def aboutus(request):
 def contact(request):
     return render(request, "contact.html")
 
+def register(request):
+    try:
+        if request.method == 'POST':
+            first_name = request.POST.get('first_name')
+            last_name = request.POST.get('last_name')
+            email = request.POST.get('email')
+            password = request.POST.get('password')
+            confirm_password = request.POST.get('confirm_password')
+            phone = request.POST.get('phone_number')
+            return HttpResponseRedirect('/aboutus/')
+    except:
+        pass
+    return render(request, "form.html")
 def gaidaRank(request, gaidaRank):
     return HttpResponse(gaidaRank)

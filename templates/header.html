@@ -12,7 +12,7 @@
     </header>
     <nav>
         <a href="{% url 'home' %}" {% if request.path == '/' %}class="active"{% endif %}>Home</a>
-        <a href="#">Shop</a>
+        <a href="{% url 'register' %}" {% if request.path == '/register/' %}class="active"{% endif %}>Register</a>
         <a href="{% url 'aboutus' %}" {% if request.path == '/aboutus/' %}class="active"{% endif %}>About Us</a>
         <a href="{% url 'contact' %}" {% if request.path == '/contact/' %}class="active"{% endif %}>Contact</a>
     </nav>
